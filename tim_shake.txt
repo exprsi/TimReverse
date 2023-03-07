@@ -1,0 +1,232 @@
+//弹出频繁时的调用堆栈
+Common.CTXDataField::CTXDataField+9FEF - 187F9E54,00000012,Common.dll+4DC70,11C40118,...
+AFCtrl.Util::AFWBoard::TXDataToXml+65A9 - 081794E0,AFCtrl.dll+2D53E8,1A97F200,119A5420,...
+AFCtrl.Util::AFWBoard::TXDataToXml+41E9 - 181794E0,119A6000,119A601C,181794E0,...
+AppFramework.dll+155E0D - 181794E0,181794E0,00000000,119A601C,...
+AppFramework.dll+155AED - 119A6000,181794E0,181794E0,1A86EDAC,...
+AppFramework.dll+14A453 - 119A601C,00000065,181794E0,181794E0,...
+ChatFrameApp.dll+66DD5 - 181FF060,00000065,181794E0,80004001,...
+ChatFrameApp.dll+EF912 - 181FF060,00000065,181794E0,Common.dll+50220,...
+AppFramework.dll+164DE2 - 18219BE0,00000065,181794E0,1863A45C,...
+AppFramework.dll+1660F8 - 18219BE0,00000065,181794E0,1863A45C,...
+AppFramework.dll+1655FF - 1863A3CC,00000065,181794E0,Common.dll+50220,...
+ChatFrameApp.dll+67676 - 18756C8C,00000065,181794E0,1863A45C,...
+ChatFrameApp.dll+1281A8 - 18756C8C,00000065,181794E0,Common.dll+50220,...
+AFUtil.Util::AFChatSession::ChatFrameEvent+50 - 1863A45C,00000065,181794E0,181794E0,...
+AFUtil.Util::AFChatSession::WriteTipInChatSession+17 - 0391DEE0,00000065,181794E0,181794E0,...
+AppUtil.Util::ChatSession::WriteTipInContactChatSession+23 - 0391DEE0,181794E0,71DFEBD5,00BDEB08,...
+SNSApp.dll+3DCD      - 71DFEBD5,181794E0,11B54960,19976AE0,...				<-----------------正常抖窗不被调用，弹出频繁时才会被调用
+SNSApp.dll+4E7D      - 181794E0,00000000,00000000,19976AE0,...				<-----------------
+SNSApp.dll+535B      - 00BDEB94,00000000,197677B0,71DFEBD5,...
+GF.Util::GF::OnElementExtEvent+B9 - 15DECDE0,00BDEB94,00000000,197677B0,...
+GF.dll+17EE8F        - 11B54960,00000000,197677B0,197A8240,...
+GF.dll+181B3F        - 00BDEC10,00000000,197677B0,00000066,...
+GF.dll+7EF17         - 00000066,199BEBEC,0A726B70,00BDECDC,...
+GF.CGFFrameAnchorHelper::GetAnchorResult+755E - 039152E0,00000066,199BEBEC,0A726B70,...
+GF.dll+141167        - 00000066,0A726B70,00BDED28,GF.dll+136980,...
+GF.dll+136980        - 199BEBEC,00000066,0A726B70,0AE64BE8,...
+GF.CDPIScaleIgnoreHelper::~CDPIScaleIgnoreHelper+5F2F - 199BE900,00BDED60,GF.dll+16A6AC,03914C80,...
+GF.dll+16A6AC        - 03914C80,00000001,003C0250,00000401,...
+USER32.dll+40F1B     - 003C0250,00000401,00000000,00000000,...
+USER32.UserCallWinProcCheckWow+33A - GF.dll+16A6F0,003C0250,00000401,00000000,...
+USER32.DispatchMessageWorker+22A - GF.dll+16A6F0,00000000,00000401,00000000,...
+USER32.DispatchMessageW+10 - 00000301,00BDEF08,AsyncTask.dll+4578,00BDEF1C,...
+AsyncTask.AsyncTask::MessagePumpForUI::ProcessMessageHelper+71 - 00BDEF1C,HummerEngine.dll+18E01,0398FDC0,00000000,...
+AsyncTask.AsyncTask::MessagePumpForUI::ProcessNextWindowsMessage+3A - 00BDEF1C,0398FDE0,0398FDC0,003C0250,...
+AsyncTask.AsyncTask::MessagePumpForUI::DoRunLoop+77 - 00000000,0398FDC0,HummerEngine.dll+18E6C,AsyncTask.dll+4178,...
+AsyncTask.AsyncTask::MessageLoop::RunHandler+15 - 00BDF068,AsyncTask.dll+2024,00BDF638,00000001,...
+HummerEngine.SetDmpUin+2288 - HummerEngine.dll+E07C,ContactInfoFrame.dll+64E91,KERNEL32.DLL+1F550,00000000,...
+HummerEngine.dll+E107 - ContactInfoFrame.dll+64E91,FFFFFFFF,00000000,HummerEngine.dll+19E08,...
+TIM.exe+2893         - 00000001,00000000,TIM.exe+7A8C,00DCA000,...
+TIM.exe+12C6         - 00000001,00BDFB98,TIM.exe+3361,TIM.exe,...
+TIM.exe+3361         - TIM.exe,00000000,00FC2248,00000001,...
+KERNEL32.BaseThreadInitThunk+19 - 00DCA000,KERNEL32.DLL+1FA10,00BDFC04,ntdll.dll+67A9E,...
+ntdll.__RtlUserThreadStart+2F - 00DCA000,63EE141A,00000000,00000000,...
+ntdll.dll+67A6E      - FFFFFFFF,ntdll.dll+88B92,00000000,00000000,...
+00000000             - TIM.exe+33E5,00DCA000,00000000,00000000,...
+
+
+
+
+SNSApp.dll+4E57 - 55                    - push ebp
+SNSApp.dll+4E58 - 8B EC                 - mov ebp,esp
+SNSApp.dll+4E5A - 8B 45 14              - mov eax,[ebp+14]
+SNSApp.dll+4E5D - 56                    - push esi
+SNSApp.dll+4E5E - 8B F1                 - mov esi,ecx
+SNSApp.dll+4E60 - 8D 4D 14              - lea ecx,[ebp+14]
+SNSApp.dll+4E63 - 51                    - push ecx
+SNSApp.dll+4E64 - 8B 10                 - mov edx,[eax]
+SNSApp.dll+4E66 - 68 CCFE1815           - push SNSApp.dll+1FECC { ("dwUin") }
+SNSApp.dll+4E6B - 50                    - push eax
+SNSApp.dll+4E6C - FF 52 48              - call dword ptr [edx+48]
+SNSApp.dll+4E6F - 6A 00                 - push 00 { 0 }
+SNSApp.dll+4E71 - 6A 00                 - push 00 { 0 }
+SNSApp.dll+4E73 - FF 75 14              - push [ebp+14]
+SNSApp.dll+4E76 - 8B CE                 - mov ecx,esi
+SNSApp.dll+4E78 - E8 AFEEFFFF           - call SNSApp.dll+3D2C		<---------------取抖窗动作执行状态
+	SNSApp.dll+3D2C - 55                    - push ebp
+	SNSApp.dll+3D2D - 8B EC                 - mov ebp,esp
+	SNSApp.dll+3D2F - 51                    - push ecx
+	SNSApp.dll+3D30 - 51                    - push ecx
+	SNSApp.dll+3D31 - 53                    - push ebx
+	SNSApp.dll+3D32 - 8B 5D 08              - mov ebx,[ebp+08]
+	SNSApp.dll+3D35 - 56                    - push esi
+	SNSApp.dll+3D36 - 57                    - push edi
+	SNSApp.dll+3D37 - 53                    - push ebx
+	SNSApp.dll+3D38 - 8B F1                 - mov esi,ecx
+	SNSApp.dll+3D3A - E8 A7FFFFFF           - call SNSApp.dll+3CE6		<--------------判断两次抖窗时间是否太短
+		SNSApp.dll+3CE6 - 55                    - push ebp
+		SNSApp.dll+3CE7 - 8B EC                 - mov ebp,esp
+		SNSApp.dll+3CE9 - 56                    - push esi
+		SNSApp.dll+3CEA - 57                    - push edi
+		SNSApp.dll+3CEB - 8D 71 14              - lea esi,[ecx+14]
+		SNSApp.dll+3CEE - 8D 45 08              - lea eax,[ebp+08]
+		SNSApp.dll+3CF1 - 8B CE                 - mov ecx,esi
+		SNSApp.dll+3CF3 - 50                    - push eax
+		SNSApp.dll+3CF4 - E8 10F7FFFF           - call SNSApp.dll+3409
+		SNSApp.dll+3CF9 - 8B F8                 - mov edi,eax
+		SNSApp.dll+3CFB - 3B 3E                 - cmp edi,[esi]
+		SNSApp.dll+3CFD - 74 08                 - je SNSApp.dll+3D07
+		SNSApp.dll+3CFF - 8B 4D 08              - mov ecx,[ebp+08]
+		SNSApp.dll+3D02 - 3B 4F 10              - cmp ecx,[edi+10]
+		SNSApp.dll+3D05 - 73 02                 - jae SNSApp.dll+3D09
+		SNSApp.dll+3D07 - 8B 3E                 - mov edi,[esi]
+		SNSApp.dll+3D09 - 3B 3E                 - cmp edi,[esi]
+		SNSApp.dll+3D0B - 75 05                 - jne SNSApp.dll+3D12
+		SNSApp.dll+3D0D - 33 C0                 - xor eax,eax
+		SNSApp.dll+3D0F - 40                    - inc eax
+		SNSApp.dll+3D10 - EB 14                 - jmp SNSApp.dll+3D26
+		SNSApp.dll+3D12 - FF 15 D4F21815        - call dword ptr [SNSApp.dll+1F2D4] { ->KERNEL32.DLL+223A0 = GetTickCount() }
+		SNSApp.dll+3D18 - 2B 47 14              - sub eax,[edi+14]		<----------- GetTickCount() - LastTime
+		SNSApp.dll+3D1B - B9 10270000           - mov ecx,00002710 { 10000 }		<---------------测试Patch此处过抖窗过快
+		SNSApp.dll+3D20 - 3B C8                 - cmp ecx,eax		;GetTickCount() - LastTime > 10000
+		SNSApp.dll+3D22 - 1B C0                 - sbb eax,eax
+		SNSApp.dll+3D24 - F7 D8                 - neg eax
+		SNSApp.dll+3D26 - 5F                    - pop edi
+		SNSApp.dll+3D27 - 5E                    - pop esi
+		SNSApp.dll+3D28 - 5D                    - pop ebp
+		SNSApp.dll+3D29 - C2 0400               - ret 0004 { 00000004 }
+	SNSApp.dll+3D3F - 85 C0                 - test eax,eax
+	SNSApp.dll+3D41 - 0F85 94000000         - jne SNSApp.dll+3DDB
+	SNSApp.dll+3D47 - 21 45 08              - and [ebp+08],eax
+	SNSApp.dll+3D4A - 8D 45 08              - lea eax,[ebp+08]
+	SNSApp.dll+3D4D - 50                    - push eax
+	SNSApp.dll+3D4E - FF 15 F4F11815        - call dword ptr [SNSApp.dll+1F1F4] { ->Common.dll+54920 }
+	SNSApp.dll+3D54 - 8B 45 08              - mov eax,[ebp+08]
+	SNSApp.dll+3D57 - 59                    - pop ecx
+	SNSApp.dll+3D58 - 6A 02                 - push 02 { 2 }
+	SNSApp.dll+3D5A - 68 0CFF1815           - push SNSApp.dll+1FF0C { ("nIconIndex") }
+	SNSApp.dll+3D5F - 8B 08                 - mov ecx,[eax]
+	SNSApp.dll+3D61 - 50                    - push eax
+	SNSApp.dll+3D62 - FF 91 20010000        - call dword ptr [ecx+00000120]
+	SNSApp.dll+3D68 - 8B 75 08              - mov esi,[ebp+08]
+	SNSApp.dll+3D6B - 8B 06                 - mov eax,[esi]
+	SNSApp.dll+3D6D - 8B B8 40010000        - mov edi,[eax+00000140]
+	SNSApp.dll+3D73 - 8D 45 F8              - lea eax,[ebp-08]
+	SNSApp.dll+3D76 - 50                    - push eax
+	SNSApp.dll+3D77 - E8 FBD7FFFF           - call SNSApp.dll+1577
+	SNSApp.dll+3D7C - 59                    - pop ecx
+	SNSApp.dll+3D7D - 8B C8                 - mov ecx,eax
+	SNSApp.dll+3D7F - FF 15 18F21815        - call dword ptr [SNSApp.dll+1F218] { ->Common.dll+157360 }
+	SNSApp.dll+3D85 - 50                    - push eax
+	SNSApp.dll+3D86 - 68 50041915           - push SNSApp.dll+20450 { ("ShakeWindow_TooMany_Tip") }
+	SNSApp.dll+3D8B - FF 15 94F01815        - call dword ptr [SNSApp.dll+1F094] { ->Common.dll+122C80 }
+	SNSApp.dll+3D91 - 59                    - pop ecx
+	SNSApp.dll+3D92 - 59                    - pop ecx
+	SNSApp.dll+3D93 - 50                    - push eax
+	SNSApp.dll+3D94 - 68 18FF1815           - push SNSApp.dll+1FF18 { ("strText") }
+	SNSApp.dll+3D99 - 56                    - push esi
+	SNSApp.dll+3D9A - FF D7                 - call edi
+	SNSApp.dll+3D9C - 8D 4D F8              - lea ecx,[ebp-08]
+	SNSApp.dll+3D9F - FF 15 50F21815        - call dword ptr [SNSApp.dll+1F250] { ->Common.dll+151980 }
+	SNSApp.dll+3DA5 - 8B 45 08              - mov eax,[ebp+08]
+	SNSApp.dll+3DA8 - 68 88130000           - push 00001388 { 5000 }
+	SNSApp.dll+3DAD - 68 20FF1815           - push SNSApp.dll+1FF20 { ("nLifetime") }
+	SNSApp.dll+3DB2 - 50                    - push eax
+	SNSApp.dll+3DB3 - 8B 08                 - mov ecx,[eax]
+	SNSApp.dll+3DB5 - FF 91 20010000        - call dword ptr [ecx+00000120]
+	SNSApp.dll+3DBB - 83 7D 0C 00           - cmp dword ptr [ebp+0C],00 { 0 }
+	SNSApp.dll+3DBF - FF 75 08              - push [ebp+08]
+	SNSApp.dll+3DC2 - 0F45 5D 10            - cmovne ebx,[ebp+10]
+	SNSApp.dll+3DC6 - 53                    - push ebx
+	SNSApp.dll+3DC7 - FF 15 54F01815        - call dword ptr [SNSApp.dll+1F054] { ->AppUtil.dll+69E2A }
+	SNSApp.dll+3DCD - 59                    - pop ecx
+	SNSApp.dll+3DCE - 59                    - pop ecx
+	SNSApp.dll+3DCF - 8D 4D 08              - lea ecx,[ebp+08]
+	SNSApp.dll+3DD2 - E8 7DD3FFFF           - call SNSApp.dll+1154
+	SNSApp.dll+3DD7 - 33 C0                 - xor eax,eax
+	SNSApp.dll+3DD9 - EB 7F                 - jmp SNSApp.dll+3E5A
+	SNSApp.dll+3DDB - 53                    - push ebx
+	SNSApp.dll+3DDC - 8B CE                 - mov ecx,esi
+	SNSApp.dll+3DDE - E8 A0190000           - call SNSApp.dll+5783
+	SNSApp.dll+3DE3 - 8D 45 08              - lea eax,[ebp+08]
+	SNSApp.dll+3DE6 - 50                    - push eax
+	SNSApp.dll+3DE7 - E8 8BD7FFFF           - call SNSApp.dll+1577
+	SNSApp.dll+3DEC - 59                    - pop ecx
+	SNSApp.dll+3DED - 8B C8                 - mov ecx,eax
+	SNSApp.dll+3DEF - FF 15 18F21815        - call dword ptr [SNSApp.dll+1F218] { ->Common.dll+157360 }
+	SNSApp.dll+3DF5 - 50                    - push eax
+	SNSApp.dll+3DF6 - 68 80041915           - push SNSApp.dll+20480 { ("ShakeWindow_SendComplete_Tip") }
+	SNSApp.dll+3DFB - FF 15 94F01815        - call dword ptr [SNSApp.dll+1F094] { ->Common.dll+122C80 }
+	SNSApp.dll+3E01 - 59                    - pop ecx
+	SNSApp.dll+3E02 - 59                    - pop ecx
+	SNSApp.dll+3E03 - 50                    - push eax
+	SNSApp.dll+3E04 - 8D 4D FC              - lea ecx,[ebp-04]
+	SNSApp.dll+3E07 - FF 15 7CF01815        - call dword ptr [SNSApp.dll+1F07C] { ->Common.dll+151750 }
+	SNSApp.dll+3E0D - 8B 35 50F21815        - mov esi,[SNSApp.dll+1F250] { (55461980) }
+	SNSApp.dll+3E13 - 8D 4D 08              - lea ecx,[ebp+08]
+	SNSApp.dll+3E16 - FF D6                 - call esi
+	SNSApp.dll+3E18 - 83 7D 0C 00           - cmp dword ptr [ebp+0C],00 { 0 }
+	SNSApp.dll+3E1C - 8D 45 FC              - lea eax,[ebp-04]
+	SNSApp.dll+3E1F - 6A 01                 - push 01 { 1 }
+	SNSApp.dll+3E21 - 0F45 5D 10            - cmovne ebx,[ebp+10]
+	SNSApp.dll+3E25 - 51                    - push ecx
+	SNSApp.dll+3E26 - 8B CC                 - mov ecx,esp
+	SNSApp.dll+3E28 - 50                    - push eax
+	SNSApp.dll+3E29 - FF 15 80F01815        - call dword ptr [SNSApp.dll+1F080] { ->Common.dll+151870 }
+	SNSApp.dll+3E2F - 33 FF                 - xor edi,edi
+	SNSApp.dll+3E31 - 57                    - push edi
+	SNSApp.dll+3E32 - 57                    - push edi
+	SNSApp.dll+3E33 - 53                    - push ebx
+	SNSApp.dll+3E34 - FF 15 58F01815        - call dword ptr [SNSApp.dll+1F058] { ->AppUtil.dll+69CE9 }
+	SNSApp.dll+3E3A - 53                    - push ebx
+	SNSApp.dll+3E3B - FF 15 44F31815        - call dword ptr [SNSApp.dll+1F344] { ->KernelUtil.dll+BEEC9 }
+	SNSApp.dll+3E41 - 83 C4 18              - add esp,18 { 24 }
+	SNSApp.dll+3E44 - 85 C0                 - test eax,eax
+	SNSApp.dll+3E46 - 75 0A                 - jne SNSApp.dll+3E52
+	SNSApp.dll+3E48 - 57                    - push edi
+	SNSApp.dll+3E49 - 53                    - push ebx
+	SNSApp.dll+3E4A - FF 15 38F31815        - call dword ptr [SNSApp.dll+1F338] { ->KernelUtil.dll+D000E }
+	SNSApp.dll+3E50 - 59                    - pop ecx
+	SNSApp.dll+3E51 - 59                    - pop ecx
+	SNSApp.dll+3E52 - 8D 4D FC              - lea ecx,[ebp-04]
+	SNSApp.dll+3E55 - FF D6                 - call esi
+	SNSApp.dll+3E57 - 33 C0                 - xor eax,eax
+	SNSApp.dll+3E59 - 40                    - inc eax
+	SNSApp.dll+3E5A - 5F                    - pop edi
+	SNSApp.dll+3E5B - 5E                    - pop esi
+	SNSApp.dll+3E5C - 5B                    - pop ebx
+	SNSApp.dll+3E5D - C9                    - leave 
+	SNSApp.dll+3E5E - C2 0C00               - ret 000C { 12 }
+SNSApp.dll+4E7D - 85 C0                 - test eax,eax				<---------------判断是否播放抖窗动画
+SNSApp.dll+4E7F - 74 1A                 - je SNSApp.dll+4E9B		<---------------nop会一直播放抖窗动画
+SNSApp.dll+4E81 - FF 75 14              - push [ebp+14]
+SNSApp.dll+4E84 - FF 15 5CF01815        - call dword ptr [SNSApp.dll+1F05C] { ->AppUtil.dll+65C43 }		<-----------播放抖窗动画
+SNSApp.dll+4E8A - 59                    - pop ecx
+SNSApp.dll+4E8B - 8B 0E                 - mov ecx,[esi]
+SNSApp.dll+4E8D - 50                    - push eax
+SNSApp.dll+4E8E - 56                    - push esi
+SNSApp.dll+4E8F - FF 51 0C              - call dword ptr [ecx+0C]
+SNSApp.dll+4E92 - FF 75 14              - push [ebp+14]
+SNSApp.dll+4E95 - 8B 06                 - mov eax,[esi]
+SNSApp.dll+4E97 - 56                    - push esi
+SNSApp.dll+4E98 - FF 50 10              - call dword ptr [eax+10]
+SNSApp.dll+4E9B - 33 C0                 - xor eax,eax
+SNSApp.dll+4E9D - 5E                    - pop esi
+SNSApp.dll+4E9E - 5D                    - pop ebp
+SNSApp.dll+4E9F - C2 1000               - ret 0010 { 16 }
+
+
+
+
+
